@@ -1,0 +1,22 @@
+# here we will do such that 
+# docker build -t  image .
+#/*docker run --name express-nodeapp .-container -v ${pwd}/src:/app/src:ro   -d -p 7000:3000  
+# express-node-app*/
+ 
+# 1)type your docker compose version
+version: "3.8"
+#2) build img and run  container with hot reload
+services:
+  express-node-app:
+    image: express-node-prod
+    build: 
+      context: .
+      target: production
+    environment:
+      - NODE_ENV=production 
+ 
+    
+  
+ 
+  
+ 
