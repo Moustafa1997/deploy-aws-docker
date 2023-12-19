@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const redis = require("redis");
+const os = require("os");
 var bodyParser = require("body-parser"); //pull information from HTML forms
 // var path = require('path');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -35,8 +36,8 @@ mongoose
 
 app.get("/", async (req, res) => {
   await redisClient.set("books", "Hello from redis! I am from docker");
-
-  res.send("<h1> hello from docker</h1>");
+  console.log(os.hostname());
+  res.send("<h1> hello from docker with watch tour 💖💕</h1>");
 });
 app.get("/data", async (req, res) => {
   await redisClient.get("books", (err, data) => {
