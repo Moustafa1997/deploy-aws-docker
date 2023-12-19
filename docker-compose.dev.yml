@@ -8,10 +8,12 @@ version: "3.8"
 #2) build img and run  container with hot reload
 services:
   express-node-app:
-    image: express-node-dev
+    image: moustafa97/node-docker
+
     build:
       context: .
       target: development
+
 
     volumes:
       - ./src:/app/src:ro

@@ -8,7 +8,9 @@ version: "3.8"
 #2) build img and run  container with hot reload
 services:
   express-node-app:
-   
+  
+  
+    
     #container_name: express-node-container
    # ports:
    #   - 3000:3000
