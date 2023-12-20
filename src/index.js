@@ -37,7 +37,7 @@ mongoose
 app.get("/", async (req, res) => {
   await redisClient.set("books", "Hello from redis! ");
   console.log(os.hostname());
-  res.send("<h1> hello from docker with watch tower 💖</h1>");
+  res.send("<h1> hello from docker with watch tower💕✔💖</h1>");
 });
 app.get("/data", async (req, res) => {
   await redisClient.get("books", (err, data) => {
